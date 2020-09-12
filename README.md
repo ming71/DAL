@@ -46,13 +46,13 @@ The performance for long text detection is not good enough. The submissions are 
 
 #### DOTA
 
-| Method           | Backbone   | mAP       |
-| ---------------- | ---------- | --------- |
-| RetinaNet        | ResNet-50  | 68.43     |
-| RetinaNet + DAL  | ResNet-50  | 71.44     |
-| RetinaNet + DAL  | ResNet-101 | 71.78     |
-| S$^2$A-Net       | ResNet-50  | 74.12     |
-| S$^2$A-Net + DAL | ResNet-50  | **76.95** |
+| Method          | Backbone   | mAP       |
+| --------------- | ---------- | --------- |
+| RetinaNet       | ResNet-50  | 68.43     |
+| RetinaNet + DAL | ResNet-50  | 71.44     |
+| RetinaNet + DAL | ResNet-101 | 71.78     |
+| S2A-Net         | ResNet-50  | 74.12     |
+| S2A-Net + DAL   | ResNet-50  | **76.95** |
 
 Experiments on DOTA are implemented based on mmdetection, since the recognition ability of some classes(TC, BC, GTF) is abnormally poor. Trained models are available here.
 
@@ -107,7 +107,7 @@ Note that :
 
 ## Detection Results
 
-![DOTA_results](https://github.com/ming71/DAL/DOTA.png)
+![DOTA_results](https://github.com/ming71/DAL/blob/master/DOTA.png)
 
 ## Citations
 
