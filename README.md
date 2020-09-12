@@ -1,11 +1,12 @@
 # Dynamic Anchor Learning for Arbitrary-Oriented Object Detection
 
-## Abstract 
+## Abstract
 
-
+To be updated.
 
 ## Basic Information
-The codes build RetinaNet for rotation object detection. The supported datasets include:
+
+The codes build RetinaNet with the proposed DAL method for rotation object detection. The supported datasets include:
 * DOTA
 * HRSC
 * ICDAR2013
@@ -20,6 +21,8 @@ Note that we use only **3** horizontal perset anchors at each location on featur
 
 #### HRSC2016
 
+Note that VOC07 metric is used for evaluation.
+
 | Method          | Backbone   | Input Size | mAP       |
 | --------------- | ---------- | ---------- | --------- |
 | RetinaNet       | ResNet-50  | 416 x 416  | 80.81     |
@@ -32,6 +35,8 @@ Note that we use only **3** horizontal perset anchors at each location on featur
 Refer to this [repo](https://github.com/ming71/UCAS-AOD-benchmark).
 
 #### ICDAR 2015
+
+The performance for long text detection is not good enough. The submissions are shown in the official website: [Incidental Scene Text 2015](https://rrc.cvc.uab.es/?ch=4&com=evaluation&task=1).
 
 | Method              | $P$  | $R$  | $F_1$    |
 | ------------------- | ---- | ---- | -------- |
@@ -49,7 +54,7 @@ Refer to this [repo](https://github.com/ming71/UCAS-AOD-benchmark).
 | S$^2$A-Net       | ResNet-50  | 74.12     |
 | S$^2$A-Net + DAL | ResNet-50  | **76.95** |
 
-Experiments on DOTA are implemented based on mmdetection, since the recognition ability of some classes(TC, BC, GTF) is abnormally poor. Trained model is available here.
+Experiments on DOTA are implemented based on mmdetection, since the recognition ability of some classes(TC, BC, GTF) is abnormally poor. Trained models are available here.
 
 
 ## Getting Started
@@ -100,6 +105,10 @@ Note that :
 - the script  needs to be executed **only once**, but testing on different datasets needs to be executed again.
 - the imageset file used in `hrsc2gt.py` is generated from `generate_imageset.py`.
 
-
 ## Detection Results
 
+![DOTA_results](https://github.com/ming71/DAL/DOTA.png)
+
+## Citations
+
+To be updated.
