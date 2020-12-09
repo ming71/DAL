@@ -1,64 +1,22 @@
-# Dynamic Anchor Learning for Arbitrary-Oriented Object Detection
+# DAL
+
+This project hosts the code for our AAAI 2021 paper: Dynamic Anchor Learning for Arbitrary-Oriented Object Detection.
+
+The source code will be available within a few days.
 
 ## Abstract
 
-To be updated.
-
-## Basic Information
-
-The codes build RetinaNet with the proposed DAL method for rotation object detection. The supported datasets include:
-* DOTA
-* HRSC
-* ICDAR2013
-* ICDAR2015
-* UCAS-AOD
-* NWPU VHR-10
-* VOC
-
-### Performance
-
-Note that we use only **3** horizontal perset anchors at each location on feature map for rotation detection(while 5 for IC15) . This implementation reaches 24 fps on RTX 2080 Ti.
-
-#### HRSC2016
-
-Note that VOC07 metric is used for evaluation.
-
-| Method          | Backbone   | Input Size | mAP       |
-| --------------- | ---------- | ---------- | --------- |
-| RetinaNet       | ResNet-50  | 416 x 416  | 80.81     |
-| RetinaNet + DAL | ResNet-50  | 416 x 416  | 88.60     |
-| RetinaNet + DAL | ResNet-101 | 416 x 416  | 88.95     |
-| RetinaNet + DAL | ResNet-101 | 800 x 800  | **89.77** |
-
-#### UCAS-AOD
-
-Refer to this [repo](https://github.com/ming71/UCAS-AOD-benchmark).
-
-#### ICDAR 2015
-
-The performance for long text detection is not good enough. The submissions are shown in the official website: [Incidental Scene Text 2015](https://rrc.cvc.uab.es/?ch=4&com=evaluation&task=1).
-
-| Method              | $P$  | $R$  | $F_1$    |
-| ------------------- | ---- | ---- | -------- |
-| RetinaNet           | 77.2 | 77.8 | 77.5     |
-| RetinaNet + DAL     | 83.7 | 79.5 | 81.5     |
-| RetinaNet + DAL(ms) | 84.4 | 80.5 | **82.4** |
-
-#### DOTA
-
-| Method          | Backbone   | mAP       |
-| --------------- | ---------- | --------- |
-| RetinaNet       | ResNet-50  | 68.43     |
-| RetinaNet + DAL | ResNet-50  | 71.44     |
-| RetinaNet + DAL | ResNet-101 | 71.78     |
-| S2A-Net         | ResNet-50  | 74.12     |
-| S2A-Net + DAL   | ResNet-50  | **76.95** |
-
-Experiments on DOTA are implemented based on mmdetection, since the recognition ability of some classes(TC, BC, GTF) is abnormally poor. Trained models are available here.
-
+ In this paper, we propose a dynamic anchor learning (DAL) method, which utilizes the newly deﬁned matching degree to comprehensively evaluate the localization potential of the anchors and carry out a more efﬁcient label assignment process. In this way, the detector can dynamically select high-quality anchors to achieve accurate object detection, and the divergence between classiﬁcation and regression will be alleviated. 
 
 ## Getting Started
+
+The codes build Rotated RetinaNet with the proposed DAL method for rotation object detection. The supported datasets include: DOTA, HRSC2016, ICDAR2013, ICDAR2015, UCAS-AOD, NWPU VHR-10, VOC. 
+
 ### Installation
+Insatll requirements:
+```
+pip install requirements.txt
+```
 Build the Cython  and CUDA modules:
 ```
 cd $ROOT/utils
@@ -91,6 +49,7 @@ python generate_imageset.py
 python train.py
 ```
 ### Evaluation
+
 Different datasets use different test methods. For UCAS-AOD/HRSC2016/VOC/NWPU VHR-10, you need to prepare labels in the appropriate format in advance. Take evaluation on HRSC2016 for example:
 ```
 cd $ROOT/datasets/evaluate
@@ -105,10 +64,26 @@ Note that :
 - the script  needs to be executed **only once**, but testing on different datasets needs to be executed again.
 - the imageset file used in `hrsc2gt.py` is generated from `generate_imageset.py`.
 
-## Detection Results
+## Main Results
+
+
+| Method | Dataset     | Bbox | Backbone   | Input Size | mAP/F1 |
+| ------ | ----------- | ---- | ---------- | ---------- | ------ |
+| DAL    | DOTA        | OBB  | ResNet-101 | 800 x 800  | 71.78  |
+| DAL    | UCAS-AOD    | OBB  | ResNet-101 | 800 x 800  | 89.87  |
+| DAL    | HRSC2016    | OBB  | ResNet-50  | 416 x 416  | 88.60  |
+| DAL    | ICDAR2015   | OBB  | ResNet-101 | 800 x 800  | 82.4   |
+| DAL    | ICDAR2013   | HBB  | ResNet-101 | 800 x 800  | 81.3   |
+| DAL    | NWPU VHR-10 | HBB  | ResNet-101 | 800 x 800  | 88.3   |
+| DAL    | VOC 2007    | HBB  | ResNet-101 | 800 x 800  | 76.1   |
+
+
+## Detections
 
 ![DOTA_results](https://github.com/ming71/DAL/blob/master/DOTA.png)
 
-## Citations
+## Citation
 
-To be updated.
+If you find our work  useful in your research, please consider citing.
+
+If you have any questions, please contact me via issue or [email](mq_chaser@126.com).
