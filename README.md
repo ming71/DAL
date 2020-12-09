@@ -1,6 +1,6 @@
 # DAL
 
-This project hosts the code for our AAAI 2021 paper: Dynamic Anchor Learning for Arbitrary-Oriented Object Detection.
+This project hosts the code for our AAAI 2021 paper: Dynamic Anchor Learning for Arbitrary-Oriented Object Detection [[arxiv](https://arxiv.org/abs/2012.04150)].
 
 The source code will be available within a few days.
 
