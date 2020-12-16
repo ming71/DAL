@@ -1,8 +1,8 @@
 # DAL
 
-This project hosts the code for our AAAI 2021 paper: Dynamic Anchor Learning for Arbitrary-Oriented Object Detection [[arxiv](https://arxiv.org/abs/2012.04150)].
+This project hosts the official implementation for our AAAI 2021 paper: 
 
-The source code will be available within a few days.
+**Dynamic Anchor Learning for Arbitrary-Oriented Object Detection** [[arxiv](https://arxiv.org/abs/2012.04150)] [comments].
 
 ## Abstract
 
@@ -15,7 +15,7 @@ The codes build Rotated RetinaNet with the proposed DAL method for rotation obje
 ### Installation
 Insatll requirements:
 ```
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 Build the Cython  and CUDA modules:
 ```
@@ -80,10 +80,19 @@ Note that :
 
 ## Detections
 
-![DOTA_results](https://github.com/ming71/DAL/blob/master/DOTA.png)
+![DOTA_results](https://github.com/ming71/DAL/blob/master/outputs/DOTA.png)
 
 ## Citation
 
-If you find our work  useful in your research, please consider citing.
+If you find our work or code useful in your research, please consider citing:
+
+```
+@article{ming2020dynamic,
+  title={Dynamic Anchor Learning for Arbitrary-Oriented Object Detection},
+  author={Ming, Qi and Zhou, Zhiqiang and Miao, Lingjuan and Zhang, Hongwei and Li, Linhao},
+  journal={arXiv preprint arXiv:2012.04150},
+  year={2020}
+}
+```
 
 If you have any questions, please contact me via issue or [email](mq_chaser@126.com).
