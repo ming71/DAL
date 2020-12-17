@@ -16,6 +16,7 @@ The codes build Rotated RetinaNet with the proposed DAL method for rotation obje
 Insatll requirements:
 ```
 pip install -r requirements.txt
+pip install git+git://github.com/lehduong/torch-warmup-lr.git
 ```
 Build the Cython  and CUDA modules:
 ```
