@@ -26,7 +26,7 @@ python setup.py build_ext --inplace
 ```
 Installation for DOTA_devkit:
 ```
-cd $ROOT/DOTA_devkit
+cd $ROOT/datasets/DOTA_devkit
 sudo apt-get install swig
 swig -c++ -python polyiou.i
 python setup.py build_ext --inplace
