@@ -87,8 +87,8 @@ class DOTADataset(data.Dataset):
             for obj in objects:
                 if len(obj) != 0 :
                     *box, class_name, difficult = obj.split(' ')
-                    if difficult == 2:
-                        continues
+                    if difficult == '1':
+                        continue
                     box = [ eval(x) for x in  obj.split(' ')[:8] ]
                     label = self.class_to_ind[class_name] 
                     boxes.append(box)
