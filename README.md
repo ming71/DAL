@@ -88,12 +88,16 @@ Note that :
 If you find our work or code useful in your research, please consider citing:
 
 ```
-@article{ming2020dynamic,
+@inproceedings{ming2021dynamic,
   title={Dynamic Anchor Learning for Arbitrary-Oriented Object Detection},
   author={Ming, Qi and Zhou, Zhiqiang and Miao, Lingjuan and Zhang, Hongwei and Li, Linhao},
-  journal={arXiv preprint arXiv:2012.04150},
-  year={2020}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={35},
+  number={3},
+  pages={2355--2363},
+  year={2021}
 }
+{"mode":"full","isActive":false}
 ```
 
 If you have any questions, please contact me via issue or [email](mq_chaser@126.com).
