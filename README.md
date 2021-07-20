@@ -97,7 +97,6 @@ If you find our work or code useful in your research, please consider citing:
   pages={2355--2363},
   year={2021}
 }
-{"mode":"full","isActive":false}
 ```
 
 If you have any questions, please contact me via issue or [email](mq_chaser@126.com).
