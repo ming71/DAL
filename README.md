@@ -2,7 +2,7 @@
 
 This project hosts the official implementation for our AAAI 2021 paper: 
 
-**Dynamic Anchor Learning for Arbitrary-Oriented Object Detection** [[arxiv](https://arxiv.org/abs/2012.04150)] [[comments](https://zhuanlan.zhihu.com/p/337272217)].
+**Dynamic Anchor Learning for Arbitrary-Oriented Object Detection** [[paper](https://ojs.aaai.org/index.php/AAAI/article/view/16336)] [[comments](https://zhuanlan.zhihu.com/p/337272217)].
 
 ## Abstract
 
