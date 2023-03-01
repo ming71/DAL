@@ -99,4 +99,4 @@ If you find our work or code useful in your research, please consider citing:
 }
 ```
 
-If you have any questions, please contact me via issue or [email](mq_chaser@126.com).
+If you have any questions, please contact me via issue or [email](chaser.ming@gmail.com).
